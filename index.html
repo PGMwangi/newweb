@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr Robot</title>
+<style>
+body {
+    background-image: url(https://rukminim2.flixcart.com/image/850/1000/kxrvi4w0/wall-decoration/m/a/1/mr-robot-fsociety-wallpaper-poster-1-vp301221-491-poster-smoky-original-imaga5gzcztaktqy.jpeg?q=90);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1 {
+    line-height: 0;
+    color: chartreuse;
+    text-align: center;
+    font-family: monospace;
+}
+p {
+    line-height: 2;
+    color: chartreuse;
+    font-family: monospace;
+}
+p2 {
+    line-height: 2;
+    color: chartreuse;
+    font-family: monospace;
+}
+p3 {
+    line-height: 2;
+    text-align: center;
+    color: chartreuse;
+    font-family: monospace;
+}
+h4 {
+    line-height: 2;
+    text-align: center;
+    color: chartreuse;
+    font-family: monospace;
+}
+h5 {
+    line-height: 2;
+    color: aqua;
+    font-family: monospace;
+}
+    </style>
+</head>
+<body>
+    <h1>FSOCIETY</h1><br>
+    <h5>fsociety@mrrobot : ~$ sudo fsociety.</h5>
+    <p id="typing-text"></p>
+    <h4>HOW WE DID IT</h4><br>
+    <p2 id="typing-text2"></p2>
+    <h4>TOOLS AND TECHNIQUES USED</h4>
+    <p3 id="typing-text3"></p3>
+    <script>
+        const text1 = `The world largest conglomerate E-Corp or as I love to call it Evil Corp. It's only fair having in mind how they have people entrangled in debt and control the society. Every master has a master, and we just about to be E-Corp's master, or should we say worst nightmare? I know you are wondering how we are going to be their master, and for you my friend, I'll let you in on a little secret.`;
+        const text2 = `The activity of fsociety came to my attention when they attacked one of our client with a virus that reciprocated with every minute, my boss believed in my work as I was the greatest set of hands that could solve the problem, so he took me to their datacenter to help solve the hack at the base but I didn't close the back-door used to access the system instead I kept it to myself, somehow I felt I needed to. Using raspberry pi to jack the temperature in an offsite storage room where they stored their data on magnetic tapes. This would destroy their tapes leaving them to rely on paper documents, where they will lead us to where they hide them. With the help of Tyrell Wellick, a former employee at E-Corp who is still hurt by the fact that they promoted someone else instead of him, which has all been what he's been dreaming with, we will hack their offshore storage and make sure every paper trail is burnt to the ground relieving everyone of debt... making everyone equal, all over again.`;
+        const text3 = `Kali Linux: This is a distro of Linux popular among hackers. Brute Force: This is a technique used to hack passwords by inputting keywords to the computer and let it guess possible combinations. Tor Browser: Initially designed for communication by the US military, it's a secure browser for all sorts of things, I MEAN ALL. ProtonMail: This is a secure end-to-end encrypted email service based in Switzerland. The Pwn Phone: A mobile platform to run a custom script called CrackSIM that finds vulnerable SIM cards and then cracking the DES encryption of that card.`;
+
+        const typingTextElement1 = document.getElementById("typing-text");
+        const typingTextElement2 = document.getElementById("typing-text2");
+        const typingTextElement3 = document.getElementById("typing-text3");
+
+        let index1 = 0;
+        let index2 = 1;
+        let index3 = 2;
+        const speed = 5;
+
+        function typeText1() {
+            if (index1 < text1.length) {
+                typingTextElement1.innerHTML += text1.charAt(index1);
+                index1++;
+                setTimeout(typeText1, speed);
+            }
+        }
+
+        function typeText2() {
+            if (index2 < text2.length) {
+                typingTextElement2.innerHTML += text2.charAt(index2);
+                index2++;
+                setTimeout(typeText2, speed);
+            }
+        }
+
+        function typeText3() {
+            if (index3 < text3.length) {
+                typingTextElement3.innerHTML += text3.charAt(index3);
+                index3++;
+                setTimeout(typeText3, speed);
+            }
+        }
+
+        // Start typing animations
+        typeText1();
+        setTimeout(typeText2, text1.length * speed);
+        setTimeout(typeText3, (text1.length + text2.length) * speed);
+    </script>
+</body>
+</html>
